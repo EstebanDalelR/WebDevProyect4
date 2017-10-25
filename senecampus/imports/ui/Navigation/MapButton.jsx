@@ -5,7 +5,7 @@ class MapButton extends Component {
   render() {
     return (
       <div>
-        <button>{this.props.buttons}</button>
+        <button>Ver {this.props.buttons}</button>
       </div>
     );
   }
