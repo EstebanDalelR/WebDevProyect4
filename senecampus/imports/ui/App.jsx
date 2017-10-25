@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
 
+import Navbar from './Navigation/Navbar.jsx';
+import Map from './Map/Map.jsx';
+import Report from './Reports/Reports.jsx';
 class App extends Component {
 
   render() {
     return (
       <div>
-        <h1>HELLo</h1>
+        <Navbar/>
+        <Map/>
+        <Report/>
       </div>
     );
   }
