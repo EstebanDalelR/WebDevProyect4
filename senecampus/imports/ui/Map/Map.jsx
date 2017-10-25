@@ -1,7 +1,21 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-class Map extends Component {
 
+import ButtonHolder from '../Navigation/ButtonHolder.jsx';
+
+class Map extends Component {
+  constructor(props) {
+    super(props);
+    this.state =
+    {
+      buttons :
+      [
+        'concesiones',
+        'entradas',
+        'edificios',
+      ]
+    };
+  }
   mapOnCanvas(){
     window.onload = function() {
       var c=document.getElementById("myCanvas");
@@ -25,11 +39,12 @@ class Map extends Component {
             id = "myCanvas"
             height = "1500"
             width = "1570"/>
-          {this.mapOnCanvas()}
-        </div>
-      );
+            {this.mapOnCanvas()}
+            <ButtonHolder buttons={this.state.buttons}/>
+          </div>
+        );
+      }
+
     }
 
-  }
-
-  export default Map;
+    export default Map;
