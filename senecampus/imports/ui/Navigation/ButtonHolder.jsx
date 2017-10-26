@@ -12,7 +12,7 @@ class ButtonHolder extends Component {
   }
   render() {
     return (
-      <div>
+      <div className= 'btn-group btn-group-justified'>
         {this.renderButtons()}
       </div>
     );

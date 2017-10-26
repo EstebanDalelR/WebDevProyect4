@@ -28,6 +28,7 @@ class Map extends Component {
 
     return (
       <div>
+        <ButtonHolder buttons={this.state.buttons}/>
         <img
           id = "uniandesMap"
           visibility= "hidden"
@@ -40,7 +41,6 @@ class Map extends Component {
             height = "1500"
             width = "1570"/>
             {this.mapOnCanvas()}
-            <ButtonHolder buttons={this.state.buttons}/>
           </div>
         );
       }
