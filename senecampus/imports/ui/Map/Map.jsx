@@ -16,16 +16,18 @@ class Map extends Component {
       ]
     };
   }
-  mapOnCanvas(){
-    window.onload = function() {
+  mapOnCanvas(imgWidth, imgHeigth){
+    window.onload = function(imgWidth, imgHeigth) {
       var c=document.getElementById("myCanvas");
       const ctx=c.getContext("2d");
       var img=document.getElementById("uniandesMap");
-      ctx.drawImage(img,0,0);
+      ctx.drawImage(img,200, 300);
     };
   }
-  render() {
 
+  render() {
+    var windowWidth = window.innerWidth;
+    var windowHeight = window.innerHeight;
     return (
       <div>
         <ButtonHolder buttons={this.state.buttons}/>
@@ -38,9 +40,9 @@ class Map extends Component {
           alt = "Uniandes Map" />
           <canvas
             id = "myCanvas"
-            height = "1500"
-            width = "1570"/>
-            {this.mapOnCanvas()}
+            height = {windowHeight}
+            width = {windowWidth}/>
+            {this.mapOnCanvas(windowWidth,windowHeight)}
           </div>
         );
       }
