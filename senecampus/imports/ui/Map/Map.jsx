@@ -10,18 +10,57 @@ class Map extends Component {
     {
       buttons :
       [
-        'concesiones',
-        'entradas',
-        'edificios',
+        {
+          "nombre":"concesiones",
+          "descripcion":"Los expendios de comida dentro de los edificios",
+          "locaciones":
+          [
+            {
+              "edificio":"ML",
+              "nombre":"Gratto",
+              "posicion":"Quinto piso, oriente",
+              "descripcion":"cafeteria",
+              "locx": 65,
+              "locy": 95
+            },
+            {
+              "edificio":"ML",
+              "nombre":"AmiGo",
+              "posicion":"Quinto piso, occidente",
+              "descripcion":"Tienda",
+              "locx": 65,
+              "locy": 96
+            }
+          ]
+        },
+        {
+          "nombre":"microondas",
+          "descripcion":"microondas publicos, gratis para la comunidad",
+          "locaciones":
+          [
+            {
+              "edificio":"ML",
+              "nombre":"Gratto",
+              "posicion":"Quinto piso, oriente",
+              "descripcion":"cafeteria",
+              "locx": 65,
+              "locy": 95
+            }
+          ]
+        },
+
       ]
     };
   }
+
   mapOnCanvas(imgWidth, imgHeigth){
-    window.onload = function(imgWidth, imgHeigth) {
+    let imgW= imgWidth*0.9;
+    let imgH= imgHeigth*0.9;
+    window.onload = function() {
       var c=document.getElementById("myCanvas");
       const ctx=c.getContext("2d");
       var img=document.getElementById("uniandesMap");
-      ctx.drawImage(img,200, 300);
+      ctx.drawImage(img,0,0,imgH,imgW);
     };
   }
 
@@ -30,7 +69,6 @@ class Map extends Component {
     var windowHeight = window.innerHeight;
     return (
       <div>
-        <ButtonHolder buttons={this.state.buttons}/>
         <img
           id = "uniandesMap"
           visibility= "hidden"
@@ -40,9 +78,10 @@ class Map extends Component {
           alt = "Uniandes Map" />
           <canvas
             id = "myCanvas"
-            height = {windowHeight}
+            height = {windowWidth}
             width = {windowWidth}/>
             {this.mapOnCanvas(windowWidth,windowHeight)}
+            <ButtonHolder buttons={this.state.buttons}/>
           </div>
         );
       }
