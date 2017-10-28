@@ -20,16 +20,16 @@ class Map extends Component {
               "nombre":"Gratto",
               "posicion":"Quinto piso, oriente",
               "descripcion":"cafeteria",
-              "locx": 65,
-              "locy": 95
+              "locx": 225,
+              "locy": 615
             },
             {
               "edificio":"ML",
               "nombre":"AmiGo",
               "posicion":"Quinto piso, occidente",
               "descripcion":"Tienda",
-              "locx": 65,
-              "locy": 96
+              "locx": 225,
+              "locy": 646
             }
           ]
         },
@@ -43,8 +43,8 @@ class Map extends Component {
               "nombre":"Gratto",
               "posicion":"Quinto piso, oriente",
               "descripcion":"cafeteria",
-              "locx": 65,
-              "locy": 95
+              "locx": 165,
+              "locy": 495
             }
           ]
         },
@@ -78,9 +78,9 @@ class Map extends Component {
           alt = "Uniandes Map" />
           <canvas
             id = "myCanvas"
-            height = {windowWidth}
+            height = {windowHeight*1.7}
             width = {windowWidth}/>
-            {this.mapOnCanvas(windowWidth,windowHeight)}
+            {this.mapOnCanvas(windowHeight*1.7,windowWidth)}
             <ButtonHolder buttons={this.state.buttons}/>
           </div>
         );
