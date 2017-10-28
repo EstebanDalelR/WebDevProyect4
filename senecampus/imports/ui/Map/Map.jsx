@@ -6,51 +6,9 @@ import ButtonHolder from '../Navigation/ButtonHolder.jsx';
 class Map extends Component {
   constructor(props) {
     super(props);
-    this.state =
-    {
-      buttons :
-      [
-        {
-          "nombre":"concesiones",
-          "descripcion":"Los expendios de comida dentro de los edificios",
-          "locaciones":
-          [
-            {
-              "edificio":"ML",
-              "nombre":"Gratto",
-              "posicion":"Quinto piso, oriente",
-              "descripcion":"cafeteria",
-              "locx": 225,
-              "locy": 615
-            },
-            {
-              "edificio":"ML",
-              "nombre":"AmiGo",
-              "posicion":"Quinto piso, occidente",
-              "descripcion":"Tienda",
-              "locx": 225,
-              "locy": 646
-            }
-          ]
-        },
-        {
-          "nombre":"microondas",
-          "descripcion":"microondas publicos, gratis para la comunidad",
-          "locaciones":
-          [
-            {
-              "edificio":"ML",
-              "nombre":"Gratto",
-              "posicion":"Quinto piso, oriente",
-              "descripcion":"cafeteria",
-              "locx": 165,
-              "locy": 495
-            }
-          ]
-        },
-
-      ]
-    };
+    // this.state =
+    // // {this.props.buttons}
+    // ;
   }
 
   mapOnCanvas(imgWidth, imgHeigth){
@@ -81,7 +39,7 @@ class Map extends Component {
             height = {windowHeight*1.7}
             width = {windowWidth}/>
             {this.mapOnCanvas(windowHeight*1.7,windowWidth)}
-            <ButtonHolder buttons={this.state.buttons}/>
+            {/* <ButtonHolder buttons={this.state.buttons}/> */}
           </div>
         );
       }

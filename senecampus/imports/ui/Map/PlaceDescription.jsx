@@ -25,7 +25,7 @@ class PlaceDescription extends Component {
     ctx.restore();
 }
   render() {
-    var pin= { x:this.props.locaciones.locx, y:this.props.locaciones.locy};
+    var pin= { x:(this.props.locaciones.locx*window.innerWidth/1400), y:(this.props.locaciones.locy*window.innerHeight/1400)};
     return (
       <div>
         <h2>{this.props.locaciones.descripcion}</h2>
