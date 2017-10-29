@@ -7,7 +7,9 @@ export const Reports = new Mongo.Collection("reports");
 if (Meteor.isServer) {
   // This code only runs on the server
   Meteor.publish('reports', ()=>{
-    return Reports.find({}, {sort: {postDate : -1}});
+    return Reports.find({}, {
+    	fields:{title: 1, type: 1, posterName: 1, postDate: 1, building: 1, description: 1},
+       	sort: {postDate : -1}});
   });
 }
 

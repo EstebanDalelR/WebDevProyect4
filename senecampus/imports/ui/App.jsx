@@ -14,19 +14,28 @@ class App extends Component {
        <Task key={buttons._id} button={button} />
      ));
    }
+
+   renderReports(){
+    if(this.props.reports){
+      return(
+          this.props.reports.map((t, i)=>{
+            return <SingleReport key={i} report={t}></SingleReport>
+          })
+        );
+    }else{
+      return (<h2>No hay reportes para mostrar! el Campus está a salvo!</h2>);
+    }
+   }
+
   render() {
     return (
       <div>
         <Navbar/>
           <Map buttons={this.props.buttons}/>
         <ReportsUI/>
-        {
-          (this.props.reports)?
-            this.props.reports.map((t, i)=>{
-              return <SingleReport key={i} report={t}></SingleReport>
-            }):
-            <div>No hay reportes para mostrar! el Campus está a salvo!</div>
-        }
+        <div>
+          {this.renderReports()}
+        </div>
       </div>
     );
   }
