@@ -6,7 +6,7 @@ class MapButton extends Component {
   constructor(props) {
     super(props);
     this.state =
-    {buttonClicked :false}
+      {buttonClicked :false}
     ;
   }
 

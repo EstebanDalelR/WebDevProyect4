@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import AccountsUIWrapper from './AccountsUIWrapper.jsx';
 
 class Navbar extends Component {
 
@@ -16,9 +17,6 @@ class Navbar extends Component {
               <li className="nav-item active">
                 <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
               </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">Link</a>
-              </li>
               <li className="nav-item dropdown">
                 <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Dropdown
@@ -33,14 +31,17 @@ class Navbar extends Component {
               <li className="nav-item">
                 <a className="nav-link disabled" href="#">Disabled</a>
               </li>
+              <li className="nav-item acive">
+                <AccountsUIWrapper></AccountsUIWrapper>
+              </li>
             </ul>
 
           </div>
         </nav>
-              </div>
-      );
-    }
-
+      </div>
+    );
   }
 
-  export default Navbar;
+}
+
+export default Navbar;

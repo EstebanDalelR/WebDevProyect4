@@ -23,7 +23,8 @@ class PlaceDescription extends Component {
     ctx.fill();
 
     ctx.restore();
-}
+  }
+  
   render() {
     var pin= {
       x:(this.props.locaciones.locx*window.innerWidth/1400),

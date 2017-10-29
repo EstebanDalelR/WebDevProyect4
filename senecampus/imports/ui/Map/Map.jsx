@@ -6,9 +6,6 @@ import ButtonHolder from '../Navigation/ButtonHolder.jsx';
 class Map extends Component {
   constructor(props) {
     super(props);
-    // this.state =
-    // // {this.props.buttons}
-    // ;
   }
 
   mapOnCanvas(imgWidth, imgHeigth){
@@ -39,7 +36,7 @@ class Map extends Component {
             height = {windowHeight*1.7}
             width = {windowWidth}/>
             {this.mapOnCanvas(windowHeight*1.7,windowWidth)}
-            {/* <ButtonHolder buttons={this.state.buttons}/> */}
+            {<ButtonHolder buttons={this.props.buttons}/>}
           </div>
         );
       }
