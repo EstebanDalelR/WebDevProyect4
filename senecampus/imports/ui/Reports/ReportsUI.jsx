@@ -11,7 +11,7 @@ class ReportsUI extends Component {
 
       var title = ReactDOM.findDOMNode(this.refs.title).value.trim();
       var type =  ReactDOM.findDOMNode(this.refs.type).value.trim();
-      var posterName = (Meteor.user())?Meteor.user().name:'Anónimo';
+      var posterName = (Meteor.user())?Meteor.user().username:'Anónimo';
       var postDate = Date.now(); 
       var building = ReactDOM.findDOMNode(this.refs.building).value.trim();
       var description = ReactDOM.findDOMNode(this.refs.description).value.trim();

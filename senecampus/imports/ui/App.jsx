@@ -50,6 +50,8 @@ class App extends Component {
 export default createContainer(() => {
   Meteor.subscribe('buttons');
   Meteor.subscribe('reports');
+
+  console.log(Meteor.user());
   return {
     buttons: Buttons.find({}, { sort : { votes : -1 }}).fetch(),
     reports: Reports.find({}, { sort: { postDate: -1 }}).fetch()
