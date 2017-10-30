@@ -1,9 +1,11 @@
 /* CSS declarations go here */
 
+/* Body */
 .body{
 	font-style: "Times New Roman", Times, serif;
 }
 
+/* POST */
 .post{
 	border-left-style: solid;
 	border-left-color: red;
@@ -40,6 +42,7 @@
 	margin-bottom: 0px;
 }
 
+/* FORM */
 .form{
 	padding: 1px;
 	background-color: gainsboro;
@@ -99,4 +102,17 @@
 
 .reports{
 	margin-bottom: 40px;
+}
+
+/* MAP */
+.map{
+	padding-left: 5%;
+	background-color: #e6e6e6;
+	margin-bottom: 5%;
+}
+
+.map h1{
+	padding-top: 5%;
+	text-align: center;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
 }

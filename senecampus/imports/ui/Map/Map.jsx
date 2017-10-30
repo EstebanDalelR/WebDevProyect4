@@ -23,7 +23,8 @@ class Map extends Component {
     var windowWidth = window.innerWidth;
     var windowHeight = window.innerHeight;
     return (
-      <div>
+      <div className="map">
+        <h1>Mapa de la Universidad de los Andes</h1>
         <img
           id = "uniandesMap"
           visibility= "hidden"
