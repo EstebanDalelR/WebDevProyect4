@@ -12,7 +12,7 @@ class ReportsUI extends Component {
       var title = ReactDOM.findDOMNode(this.refs.title).value.trim();
       var type =  ReactDOM.findDOMNode(this.refs.type).value.trim();
       var posterName = (Meteor.user())?Meteor.user().name:'Anónimo';
-      var postDate = Date.now(); 
+      var postDate = Date.now();
       var building = ReactDOM.findDOMNode(this.refs.building).value.trim();
       var description = ReactDOM.findDOMNode(this.refs.description).value.trim();
 
@@ -37,8 +37,11 @@ class ReportsUI extends Component {
       <div>
       <form>
             <h4>¿Encontraste un problema? ¡Reportalo acá!:</h4>
+            <label for="title">Título</label>
             <input type="text" ref="title" placeholder="Título del reporte"/>
+            <label for="type">Tipo de daño</label>
             <input type="text" ref="type" placeholder="Tipo de daño encontrado"/>
+            <label for="building">Edificio</label>
             <input
             list="edificios"
             ref="building"
@@ -113,9 +116,10 @@ class ReportsUI extends Component {
                   <option value='Y'/>
                   <option value='Z'/>
             </datalist>
+            <label for="description">Descripción</label>
             <input type="text" ref="description" placeholder="Reporte"/>
-      </form>
             <input type="submit" onClick={this.handleSubmit.bind(this)} value="Enviar"/>
+      </form>
       </div>
     );
   }
