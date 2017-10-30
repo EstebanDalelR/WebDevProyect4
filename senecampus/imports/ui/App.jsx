@@ -31,10 +31,12 @@ class App extends Component {
     return (
       <div>
         <Navbar/>
-          <Map buttons={this.props.buttons}/>
-        <ReportsUI/>
-        <div>
-          {this.renderReports()}
+        <Map buttons={this.props.buttons}/>
+        <div className="reports">
+          <ReportsUI/>
+          <div>
+            {this.renderReports()}
+          </div>
         </div>
       </div>
     );
@@ -51,7 +53,6 @@ export default createContainer(() => {
   Meteor.subscribe('buttons');
   Meteor.subscribe('reports');
 
-  console.log(Meteor.user());
   return {
     buttons: Buttons.find({}, { sort : { votes : -1 }}).fetch(),
     reports: Reports.find({}, { sort: { postDate: -1 }}).fetch()

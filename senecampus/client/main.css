@@ -1,1 +1,102 @@
 /* CSS declarations go here */
+
+.body{
+	font-style: "Times New Roman", Times, serif;
+}
+
+.post{
+	border-left-style: solid;
+	border-left-color: red;
+	background-color: #e6e6e6;
+	padding-top: 0.5px;
+	margin-top: 10px;
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 18px;
+	border-top-right-radius: 18px;
+}
+
+.post h4{
+	color: black;
+	border-bottom-color: #716b6b;
+	border-bottom-style: solid;
+	border-bottom-width: 2px;
+	border-bottom-right-radius: 30px;
+	margin-top: 1%;
+}
+
+.post .row{
+	padding-bottom: 1%;
+	margin-left: 4%;
+}
+
+.post h6{
+	color: #545050;
+	margin-left: 2%;
+	font-size: .9rem;	
+}
+
+.post p{
+	color:black;
+	margin-bottom: 0px;
+}
+
+.form{
+	padding: 1px;
+	background-color: gainsboro;
+	border-radius: 18px;
+}
+
+.form h3{
+	text-align: center;
+	border-bottom-style: solid;
+	border-bottom-width: 2px;
+	border-bottom-color: dimgray;
+	border-bottom-left-radius: 18px;
+	border-bottom-right-radius: 18px;
+	margin-top: 1%;
+	padding-bottom: 1%;
+	width:100%;
+}
+
+.form h5{
+	margin-left: 3%;
+	width:100%;
+}
+
+.form label{
+	margin-left:2%;
+	border-left-style:solid;
+	border-left-color:dimgray;
+	color:dimgray;
+}
+
+.form input{
+	margin-left: 3%;
+	color:gray;
+}
+
+.form .col-sm-12{
+	max-width: 93% !important;
+}
+
+.form .row{
+	margin-top: 5px;
+}
+
+.form .button{
+	width: 40%;
+	margin: auto;
+	margin-bottom: 2%;
+	color: #615a5a;
+}
+
+.form .button:hover{
+	margin: auto;
+	margin-bottom: 2%;
+	color: white;
+	background-color: dimgray;
+}
+
+.reports{
+	margin-bottom: 40px;
+}
